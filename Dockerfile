@@ -1,4 +1,4 @@
-FROM python:3.7.3-alpine
+FROM python:3.7.7-alpine
 
 LABEL org.label-schema.name = "python-alpine-pandas-bash"
 LABEL org.label-schema.description = "Python alpine image with pandas and bash preinstalled"
@@ -8,5 +8,5 @@ LABEL org.label-schema.vendor = "Stuart Illson"
 
 RUN apk add --no-cache g++ wget bash
 RUN pip install --upgrade pip && \
-	pip install pandas
+	pip install pandas==1.0.3
 
